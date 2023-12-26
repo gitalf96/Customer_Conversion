@@ -7,16 +7,13 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import sys
 
-#[theme]
-primaryColor = "#0000FF"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F0F0F0"
-textColor = "#000000"
 
 
+dt=pd.read_csv("C:/Users/AlfredRomarioG/OneDrive - Cittabase Solutions Private Limited/Desktop/Project/train.csv")
+df=pd.read_csv("C:/Users/AlfredRomarioG/OneDrive - Cittabase Solutions Private Limited/Desktop/Project/train.csv")
+#Sidebar
 
-dt=pd.read_csv('train.csv')
-df=pd.read_csv('train.csv')
+df.head()
 
 
 #drop duplicates
@@ -242,11 +239,62 @@ if selected=="Data Preprocessing":
             st.write(df.dur_cat.value_counts())
             
 if selected=="Analysis":
+    st.header(':red[Target split]')
     st.write("No.of people successfully converted:", df['y'].value_counts()['yes'])
     st.write("No.of people failed to convert:", df['y'].value_counts()['no'])
 
+    st.header(':red[Feature Vs Target]')
+    st.subheader(':green[Marital status vs Target]')
+#     st.pyplot(df[''])
+    fig,ax=plt.subplots()
+    colors = ['red', 'cyan']
+    ax=sns.countplot(x='marital',hue='y',data=df, palette=colors)
+    for i in ax.containers:
+      ax.bar_label(i,)
+    st.pyplot(fig)
+    st.subheader(':green[Job vs Target]')
+    fig,ax=plt.subplots()
+    colors = ['red','cyan']
+    ax=sns.countplot(x='job',hue='y',data=df, palette=colors)
+    plt.title('Jobs vs Target')
+    plt.xticks(rotation=50)
+    for i in ax.containers:
+      ax.bar_label(i,)
+    st.pyplot(fig)
+
+    st.subheader(':green[Educational Qualification vs Target]')
+    fig,ax=plt.subplots()
+    colors = ['red','cyan']
+    ax=sns.countplot(x='education_qual',hue='y',data=df, palette=colors)
+#     plt.xticks(rotation=50)
+    for i in ax.containers:
+      ax.bar_label(i,)
+    st.pyplot(fig)
+
+    st.subheader(':green[Educational Month vs Target]')
+    fig,ax=plt.subplots()
+    colors = ['red','cyan']
+    ax=sns.countplot(x='mon',hue='y',data=df, palette=colors)
+    plt.xticks(rotation=50)
+    for i in ax.containers:
+      ax.bar_label(i,)
+    st.pyplot(fig)
+
+    st.subheader(':green[Previous Outcome vs Target]')
+    fig,ax=plt.subplots()
+    colors = ['red','cyan']
+    ax=sns.countplot(x='prev_outcome',hue='y',data=df, palette=colors)
+    #plt.xticks(rotation=50)
+    for i in ax.containers:
+      ax.bar_label(i,)
+    st.pyplot(fig)
     
 
 
       
-    
+#     my_colors = ['Magenta', 'cyan']
+# sns.countplot(x='job',hue='y',data=df, palette=my_colors)
+# plt.xticks(rotation=50)
+# plt.title('Jobs vs Target', fontweight='bold', color='maroon')
+# plt.xlabel('Job', color='DarkGreen')
+# plt.ylabel('y', color='DarkGreen')
