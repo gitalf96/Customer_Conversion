@@ -1,4 +1,6 @@
 import streamlit as st
+import sys
+sys.path.insert(1,"C:\\Users\\AlfredRomarioG\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\streamlit_option_menu")
 from streamlit_option_menu import option_menu 
 import pandas as pd
 import numpy as np
