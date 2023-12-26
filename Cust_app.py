@@ -9,8 +9,8 @@ import sys
 
 
 
-dt=pd.read_csv("C:/Users/AlfredRomarioG/OneDrive - Cittabase Solutions Private Limited/Desktop/Project/train.csv")
-df=pd.read_csv("C:/Users/AlfredRomarioG/OneDrive - Cittabase Solutions Private Limited/Desktop/Project/train.csv")
+dt=pd.read_csv('train.csv')
+df=pd.read_csv('train.csv')
 #Sidebar
 
 df.head()
