@@ -7,9 +7,17 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import sys
 
+#[theme]
+primaryColor = "#0000FF"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F0F0"
+textColor = "#000000"
+
+
+
 dt=pd.read_csv('train.csv')
 df=pd.read_csv('train.csv')
-#Sidebar
+
 
 #drop duplicates
 # dt=dt.drop_duplicates()
