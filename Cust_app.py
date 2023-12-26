@@ -1,13 +1,11 @@
 import streamlit as st
-import sys
-sys.path.insert(1,"C:\\Users\\AlfredRomarioG\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\streamlit_option_menu")
 from streamlit_option_menu import option_menu 
 import pandas as pd
 import numpy as np
 import sklearn as sk
 import seaborn as sns 
 import matplotlib.pyplot as plt
-import altair as alt
+import sys
 
 dt=pd.read_csv("C:\\Users\\AlfredRomarioG\\OneDrive - Cittabase Solutions Private Limited\\Desktop\\Project\\train.csv")
 df=pd.read_csv("C:\\Users\\AlfredRomarioG\\OneDrive - Cittabase Solutions Private Limited\\Desktop\\Project\\train.csv")
