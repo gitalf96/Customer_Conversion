@@ -7,8 +7,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import sys
 
-dt=pd.read_csv("C:\\Users\\AlfredRomarioG\\OneDrive - Cittabase Solutions Private Limited\\Desktop\\Project\\train.csv")
-df=pd.read_csv("C:\\Users\\AlfredRomarioG\\OneDrive - Cittabase Solutions Private Limited\\Desktop\\Project\\train.csv")
+dt=pd.read_csv("C:/Users/AlfredRomarioG/OneDrive - Cittabase Solutions Private Limited/Desktop/Project/train.csv")
+df=pd.read_csv("C:/Users/AlfredRomarioG/OneDrive - Cittabase Solutions Private Limited/Desktop/Project/train.csv")
 #Sidebar
 
 #drop duplicates
